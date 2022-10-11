@@ -7,7 +7,7 @@ const Card = ({topic}) => {
     <div>
       <div className="card card-compact w-70 bg-base-100 shadow-xl pt-3 mt-3">
         <figure>
-          <img className="h-40" src={logo} />
+          <img className="h-40 bg-slate-200" src={logo} />
         </figure>
         <div className="card-body">
           <h2 className="card-title">Quiz Topic: <span className="font-bold text-cyan-500 text-2xl">{name}</span></h2>

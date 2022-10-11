@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { TopicContext } from "../../layouts/Main";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
   const quizTopics = useContext(TopicContext);
   const data = quizTopics.data;
   console.log(quizTopics)
   return (
-    <div>
-      <h1>this is statistics component</h1>
-      <BarChart width={800} height={400} data={data}>
+    <div className="max-w-full">
+      <h1 className="text-4xl font-bold text-center p-4"> There are Rechart of some data.</h1>
+      <div className="text-center mt-6">
+      <BarChart className="m-auto" width={650} height={300} data={data}>
         <XAxis dataKey="name" stroke="#8884d8" />
         <YAxis />
         <Tooltip wrapperStyle={{ width: 100, backgroundColor: "#ccc" }} />
@@ -27,6 +28,7 @@ const Statistics = () => {
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <Bar dataKey="total" fill="#8884d8" barSize={30} />
       </BarChart>
+      </div>
     </div>
   );
 };
