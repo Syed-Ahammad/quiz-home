@@ -23,23 +23,24 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home></Home>,
+          element: <Home></Home>
         },
         {
           path: "/home",
-          element: <Home></Home>,
+          element: <Home></Home>
         },
         {
           path: "/statistics",
-          element: <Statistics></Statistics>,
+          element: <Statistics></Statistics>
         },
         {
           path: "/blogs",
           element: <Blog></Blog>,
         },
         {
-          path: "/quiz",
+          path: "/quiz/:quizId",
           element: <Questions></Questions>,
+          loader: async({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
         }
       ],
     },
