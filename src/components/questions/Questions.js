@@ -4,11 +4,14 @@ import Quiz from '../quiz/Quiz';
 
 const Questions = () => {
     const quiz = useLoaderData();
-    console.log(quiz.data);
+    const {questions, total, id} = quiz.data;
+
     return (
-        <div>
+        <div className=''>
             <h1>questions component</h1>
-            <Quiz></Quiz>
+          <div className="grid lg:grid-cols-2 grid-cols-1 m-4">
+          {questions.map(quiz=> <Quiz key={quiz.id} quiz={quiz}></Quiz>)}
+          </div>
         </div>
     );
 };
