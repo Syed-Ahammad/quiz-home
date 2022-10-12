@@ -1,3 +1,15 @@
+### Website Live Link
+You can see Our website Quiz House [click here](https://quiz-home.netlify.app/)
+
+## Make a Quiz game with react app
+
+### Some featured in this app
+ => Seeing Home page. there are some card for quiz topic and see also banner.
+ => Seeing Statistics page. there are make a chart using quiz related data.
+ => Blog page created for some blog post
+ => There are also see error page for back to home
+ => There are not created about page because of navigated to Error Page.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
