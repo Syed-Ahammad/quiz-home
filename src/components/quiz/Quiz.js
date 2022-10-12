@@ -1,15 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Option from "../option/Option";
+ import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz }) => {
-  const { options, question } = quiz;
-  console.log(quiz);
+  const { options, question, correctAnswer } = quiz;
+  // console.log(quiz);
   const ques = question.replace(/(<([^>]+)>)/gi, "");
+
+  // const [correct, setCorrect] = useState(correctAnswer);
+
+  const handleToShowResult = (answer)=>{
+
+    if(correctAnswer === answer){
+
+      toast.success(`Your Answer is correct`,  {
+       position: toast.POSITION.TOP_CENTER
+     });
+    }
+    else{
+      
+      toast.error(`Your Answer is wrong`,  {
+        position: toast.POSITION.TOP_CENTER
+      });
+    }
+  }
+
+  const handleToShowCorrect = (answer)=>{
+
+  
+    toast.info(`Correct Answer:  (${answer})`,  {
+      position: toast.POSITION.TOP_CENTER
+    });
+    // console.log(answer);
+}
+
   return (
     <div className="border-2 border-cyan-400 m-4 text-center p-4">
+       <ToastContainer autoClose={2000} />
       <div className="flex justify-between my-4">
         <h1 className="text-xl pb-3">{ques} </h1>
-        <button className="mx-2 btn border-none bg-white text-blue-600 hover:bg-green-300">
+        <button onClick={()=>handleToShowCorrect(correctAnswer)} className="mx-2 btn border-none bg-white text-blue-600 hover:bg-green-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -33,7 +65,7 @@ const Quiz = ({ quiz }) => {
       </div>
       <form className="grid grid-cols-2 gap-4 justify-center">
         {options.map((option) => (
-          <Option key={option} option={option}></Option>
+          <Option handleToShowResult={handleToShowResult} key={option} option={option}></Option>
         ))}
       </form>
     </div>
