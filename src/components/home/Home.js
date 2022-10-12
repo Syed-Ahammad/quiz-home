@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { TopicContext } from "../../layouts/Main";
 import Card from "../card/Card";
+import "./Home.css";
 
 const Home = () => {
   const quizTopics = useContext(TopicContext);
@@ -10,8 +11,8 @@ const Home = () => {
   return (
     <div className="px-6 py-4">
       <div className="carousel w-full h-52 mb-3">
-        <div id="item1" className="carousel-item w-screen">
-          <img src="https://placeimg.com/800/200/arch" className="w-full rounded-lg" />
+        <div id="item1" className="carousel-item w-full banner justify-center items-center">
+         <p className="text-4xl font-bold text-cyan-300">Check Your Brain by Playing Quiz Game.</p>
         </div>
       </div>
      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4"> 
