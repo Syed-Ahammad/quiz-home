@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./layouts/Main";
 import Home from "./components/home/Home";
 import Statistics from "./components/statistics/Statistics";
-import Blog from "./components/blog/Blog";
+import Blogs from "./components/blog/Blogs";
 import Questions from './components/questions/Questions';
 import ErrorPage from "./components/errorPage/ErrorPage";
 
@@ -29,7 +29,7 @@ function App() {
         },
         {
           path: "/blogs",
-          element: <Blog></Blog>,
+          element: <Blogs></Blogs>,
         },
         {
           path: "/quiz/:quizId",

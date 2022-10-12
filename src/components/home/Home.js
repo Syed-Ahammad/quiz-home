@@ -12,7 +12,7 @@ const Home = () => {
     <div className="px-6 py-4">
       <div className="carousel w-full h-52 mb-3">
         <div id="item1" className="carousel-item w-full banner justify-center items-center">
-         <p className="text-4xl font-bold text-cyan-300">Check Your Brain by Playing Quiz Game.</p>
+         <p className="md:text-4xl text-2xl font-bold text-cyan-300 text-center">Check Your Brain by Playing Quiz Game.</p>
         </div>
       </div>
      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4"> 

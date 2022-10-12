@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 md:flex-row flex flex-col">
         <div className="flex-1">
           <Link to='/home' className="btn btn-ghost normal-case text-2xl font-bold"><span className='text-cyan-500'>Quiz House</span></Link>
         </div>
